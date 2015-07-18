@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BKC - TheUnforgiven</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="/easyrtc/easyrtc.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css">
+
+
+    
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/demo_room.css" />
+        <script type="text/javascript" src="js/myscript.js"></script>
+
+    </head>
+
+    <body onload="appInit()">
+        <input type="text" id="roomName" value="<%= roomName %>" style="visibility:hidden" disabled>
+    
+        <div id="fullpage"  class="boxCommon" style="background-image:url('images/background.jpg')">
+            <video id="box0" class="transit boxCommon thumbCommon easyRTCMirror" muted="muted" volume="0" ></video>
+            <video id="box1" class="transit boxCommon thumbCommon" style="visibility:hidden"></video>
+            <video id="box2" class="transit boxCommon thumbCommon" style="visibility:hidden"></video>
+            <video id="box3" class="transit boxCommon thumbCommon" style="visibility:hidden"></video>
+ 
+            <img id="killButton" class="transit boxCommon" onclick="killActiveBox()" src="images/button_close.png" style="display:none;z-index:3" alt="close button" />
+            <img id="muteButton" class="transit boxCommon" onclick ="muteActiveBox()" src="images/button_mute.png" style="display:none;z-index:3" alt="mute button" />
+        </div>
+    </body>
+</html>
